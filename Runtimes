@@ -1,0 +1,21 @@
+Results for the extraLargeArray
+insert 1.236454541 s
+append 1.99175 ms
+
+Results for the largeArray
+insert 9.208042 ms
+append 630 μs
+
+Results for the mediumArray
+insert 178.625 μs
+append 130.125 μs
+
+Results for the smallArray
+insert 33.75 μs
+append 85.083 μs
+
+Results for the tinyArray
+insert 23.875 μs
+append 73.25 μs
+
+Starting with the tinyArray, insert initially has the quicker runtime, of almost 24 microseconds. However, as observed, this changes as we move through the arrays into the larger ones. By the time we have reached the mediumArray, append has actually overtaken insert regarding runtime, and is now the quicker of the two by 48.5 microseconds. By the time we get to the extraLargeArray, we can plainly see that append has a runtime of almost two milliseconds and insert has a runtime of a bit over one second. It can be stated that append definitely scales better than insert, moving almost 500 times faster in the largest array.
